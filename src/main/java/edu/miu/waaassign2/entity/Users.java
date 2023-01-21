@@ -19,7 +19,7 @@ public class Users {
     private long id;
     private String name;
 
-    @OneToMany//(cascade=CascadeType.REMOVE , mappedBy = "user")
+    @OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name="user-id")
     //@JsonManagedReference
     private List<Post> posts;

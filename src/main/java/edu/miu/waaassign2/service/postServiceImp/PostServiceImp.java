@@ -1,7 +1,6 @@
 package edu.miu.waaassign2.service.postServiceImp;
 
 import edu.miu.waaassign2.entity.Post;
-import edu.miu.waaassign2.entity.Users;
 import edu.miu.waaassign2.repo.PostRepo;
 import edu.miu.waaassign2.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +26,10 @@ public class PostServiceImp implements PostService {
     @Override
     public Post getById(long id) {
         return postRepo.findById(id).get();
+    }
+
+    @Override
+    public Iterable<Post> findAllPost() {
+        return postRepo.findAll();
     }
 }
